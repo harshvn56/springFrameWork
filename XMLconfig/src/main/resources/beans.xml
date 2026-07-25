@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean  id="paymentService" name="ps1" class="org.springCore.payment.PaymentService">-->
+<!--        <constructor-arg  index="0" value="UPI"/>-->
+<!--        <constructor-arg  index="1" value="2"/>-->
+<!--    </bean>-->
+
+<!--    <bean  id="orderService" name="os1" class="org.springCore.OrderService">-->
+<!--&lt;!&ndash;      <constructor-arg ref="paymentService"/>&ndash;&gt;-->
+<!--        <property name="PaymentService" ref="paymentService"/>-->
+<!--    </bean>-->
+
+<!-- <bean  id="upiPayment" class="org.springCore.payment.UPIPayment" primary="true"/>-->
+<!--  <bean  id="cardPayment" class="org.springCore.payment.CardPayment"/>-->
+
+<!--    <bean id="orderService" class="org.springCore.OrderService">-->
+<!--        <constructor-arg ref="upiPayment"/>-->
+<!--    </bean>-->
+
+    <bean id="userDetails" class="org.springCore.UserDetails"  init-method="init" destroy-method="cleanup">
+      <constructor-arg name="usernames">
+           <list>
+             <value>Harsha</value>
+               <value> virat kholi </value>
+           </list>
+      </constructor-arg>
+
+
+    </bean>
+
+</beans>

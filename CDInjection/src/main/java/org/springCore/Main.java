@@ -1,0 +1,21 @@
+package org.springCore;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    static void main()
+    {
+//       A  a = new A();
+        ApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class);
+
+        OrderService orderService = context.getBean(OrderService.class);
+        orderService.OrderPlaced();
+//
+//        PaymentService paymentService = context.getBean(PaymentService.class);
+//        paymentService.paymentDone();
+    }
+}
